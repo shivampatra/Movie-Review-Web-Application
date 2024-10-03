@@ -1,0 +1,58 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+ .box{
+    height: 30rem;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+   
+    font-size: 1.2rem;
+    position: absolute;
+    top:10%;
+    left:25%;
+   
+
+}
+ 
+.button{
+    height: 4rem;
+    width: 22rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    background-color: #F6EACB;
+    color:#1E201E;
+}
+
+button:hover{
+    background-color:#8EACCD ;
+    color: #000;
+}
+
+
+#uname,#pwd,#mail,#num{
+    height: 4rem;
+    width: 30rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    /* border: 1px solid #0066ff; */
+    background-color: #F1D3CE;
+    color:#161D6F;
+}
+
+
+#uname:hover,#pwd:hover{
+    border: 2px solid #0066ff;
+}
+#uname:active,#pwd:active{
+    border: 2px solid #0066ff;
+}
+
+h3{
+    text-align: center;
+    color: #FF9874;
+}
