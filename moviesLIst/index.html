@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Latest Movies Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-particles" id="particles"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🎬 MovieFlix</h1>
+                <div class="search-filter">
+                    <div class="search-box">
+                        <input type="text" class="search-input" id="searchInput" placeholder="Search movies...">
+                        <button class="search-btn" id="searchBtn">🔍</button>
+                    </div>
+                    <select class="filter-dropdown" id="qualityFilter">
+                        <option value="">All Quality</option>
+                        <option value="HDRip">HDRip</option>
+                        <option value="HDTC">HDTC</option>
+                        <option value="BluRay">BluRay</option>
+                        <option value="CAM">CAM</option>
+                        <option value="HDCAM">HDCAM</option>
+                        <option value="TELESYNC">TELESYNC</option>
+                    </select>
+                    <select class="filter-dropdown" id="yearFilter">
+                        <option value="">All Years</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="stats">
+            <div class="stats-content">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalMovies">0</div>
+                    <div class="stat-label">Total Movies</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="filteredMovies">0</div>
+                    <div class="stat-label">Showing</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="newMovies">0</div>
+                    <div class="stat-label">2025 Movies</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loadingIndicator" class="loading">
+            <div class="spinner"></div>
+            <div>Loading amazing movies...</div>
+        </div>
+
+        <div id="moviesContainer" class="movies-grid" style="display: none;"></div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🎭</div>
+            <div>No movies found matching your criteria</div>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="display: none;">
+            <h3>⚠️ Unable to Load Movies</h3>
+            <p>The movies.json file could not be found or loaded.</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.7;">
+                Please make sure the 'movies.json' file is in the same directory as this HTML file.
+            </p>
+            <button class="retry-btn" onclick="loadMovies()">Try Again</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MovieFlix. All rights reserved. | Enjoy your movie experience!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
